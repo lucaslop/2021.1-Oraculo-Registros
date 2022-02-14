@@ -9,9 +9,7 @@ const app = express();
 env.config();
 const { PORT, APP_PORT, CORS } = process.env;
 
-let corsOptions = {
-  origin: (CORS === "") ? "http://localhost:3000" : `${CORS}`,
-};
+
 
 app.use(cors());
 app.use(morgan("short"));
